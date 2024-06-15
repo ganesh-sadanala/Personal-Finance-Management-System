@@ -1,0 +1,33 @@
+type Query {
+    getUser(id: ID!): User
+    getIncomes(userId: ID!): [Income]
+    getExpenses(userId: ID!): [Expense]
+}
+
+type Mutation {
+    createUser(username: String!, password: String!, role: String!): User
+    createIncome(userId: ID!, source: String!, amount: Float!, date: String!): Income
+    createExpense(userId: ID!, category: String!, amount: Float!, date: String!): Expense
+}
+
+type User {
+    id: ID!
+    username: String!
+    role: String!
+}
+
+type Income {
+    id: ID!
+    source: String!
+    amount: Float!
+    date: String!
+    user: User!
+}
+
+type Expense {
+    id: ID!
+    category: String!
+    amount: Float!
+    date: String!
+    user: User!
+}

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bfdb2db-dba7-4351-8f3d-7e530dd72277" name="Changes" comment="Add entities">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/repository/IncomeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/repository/UserRepository.java" afterDir="false" />
+    <list default="true" id="3bfdb2db-dba7-4351-8f3d-7e530dd72277" name="Changes" comment="Add repositories">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/graphql/schema.graphqls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,13 +79,22 @@
       <option name="project" value="LOCAL" />
       <updated>1718476586796</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add repositories">
+      <option name="closed" value="true" />
+      <created>1718476729526</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718476729526</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add README.md" />
     <MESSAGE value="configure database" />
     <MESSAGE value="Add entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add entities" />
+    <MESSAGE value="Add repositories" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add repositories" />
   </component>
 </project>
