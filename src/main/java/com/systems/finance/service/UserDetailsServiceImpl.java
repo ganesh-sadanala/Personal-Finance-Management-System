@@ -2,6 +2,7 @@ package com.systems.finance.service;
 
 import com.systems.finance.model.User;
 import com.systems.finance.repository.UserRepository;
+import com.systems.finance.security.UserPrincipal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

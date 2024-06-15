@@ -3,10 +3,8 @@ package com.systems.finance.controller;
 import graphql.ExecutionInput;
 import graphql.ExecutionResult;
 import graphql.GraphQL;
-import graphql.kickstart.execution.GraphQLObjectMapper;
 import graphql.kickstart.execution.GraphQLRequest;
 import graphql.kickstart.tools.SchemaParser;
-import graphql.kickstart.tools.SchemaParserBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +30,7 @@ public class GraphQLController {
         ExecutionInput executionInput = ExecutionInput.newExecutionInput()
                 .query(request.getQuery())
                 .operationName(request.getOperationName())
-                .context(request.getContext())
+                .context(request)
                 .build();
 
         ExecutionResult executionResult = this.graphQL.execute(executionInput);
