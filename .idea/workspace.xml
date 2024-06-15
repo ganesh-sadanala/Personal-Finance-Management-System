@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bfdb2db-dba7-4351-8f3d-7e530dd72277" name="Changes" comment="Secure GraphQL endpoint to require authentication and handle JWT tokens.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/UserPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cody_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cody_history.xml" afterDir="false" />
+    <list default="true" id="3bfdb2db-dba7-4351-8f3d-7e530dd72277" name="Changes" comment="configure spring security">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/controller/GraphQLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/controller/GraphQLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtTokenProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/service/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicaton.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicaton.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718481285402</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="configure spring security">
+      <option name="closed" value="true" />
+      <created>1718481998166</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1718481998166</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -158,6 +159,7 @@
     <MESSAGE value="create GraphQL context to hold authentication information" />
     <MESSAGE value="Implement a filter to intercept and validate JWT tokens from requests." />
     <MESSAGE value="Secure GraphQL endpoint to require authentication and handle JWT tokens." />
-    <option name="LAST_COMMIT_MESSAGE" value="Secure GraphQL endpoint to require authentication and handle JWT tokens." />
+    <MESSAGE value="configure spring security" />
+    <option name="LAST_COMMIT_MESSAGE" value="configure spring security" />
   </component>
 </project>
