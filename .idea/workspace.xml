@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bfdb2db-dba7-4351-8f3d-7e530dd72277" name="Changes" comment="Add graphql schema files">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/resolver/MutationResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/resolver/QueryResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/repository/ExpenseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/repository/ExpenseRepository.java" afterDir="false" />
+    <list default="true" id="3bfdb2db-dba7-4351-8f3d-7e530dd72277" name="Changes" comment="Add GraphQL resolvers">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtTokenProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +97,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718476813390</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add GraphQL resolvers">
+      <option name="closed" value="true" />
+      <created>1718477220752</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718477220752</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -106,6 +114,7 @@
     <MESSAGE value="Add entities" />
     <MESSAGE value="Add repositories" />
     <MESSAGE value="Add graphql schema files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add graphql schema files" />
+    <MESSAGE value="Add GraphQL resolvers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add GraphQL resolvers" />
   </component>
 </project>
