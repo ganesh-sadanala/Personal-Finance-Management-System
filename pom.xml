@@ -6,4 +6,19 @@
   <version>1.0-SNAPSHOT</version>
   <name>Archetype - personal-finance-management-system</name>
   <url>http://maven.apache.org</url>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+      <version>3.3.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.graphql-java-kickstart</groupId>
+      <artifactId>graphql-spring-boot-starter</artifactId>
+      <version>15.1.0</version>
+    </dependency>
+
+
+  </dependencies>
 </project>
