@@ -1,11 +1,7 @@
 package com.systems.finance.resolver;
 
-import com.systems.finance.model.Expense;
-import com.systems.finance.model.Income;
-import com.systems.finance.model.User;
-import com.systems.finance.repository.ExpenseRepository;
-import com.systems.finance.repository.IncomeRepository;
-import com.systems.finance.repository.UserRepository;
+import com.systems.finance.model.*;
+import com.systems.finance.repository.*;
 import graphql.kickstart.annotations.GraphQLQueryResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -16,6 +12,12 @@ import java.util.List;
 
 @Component
 public class QueryResolver implements GraphQLQueryResolver {
+
+    @Autowired
+    private InvestmentRepository investmentRepository;
+
+    @Autowired
+    private SavingsGoalRepository savingsGoalRepository;
 
     @Autowired
     private UserRepository userRepository;
@@ -36,6 +38,14 @@ public class QueryResolver implements GraphQLQueryResolver {
 
     public List<Expense> getExpenses(Long userId) {
         return expenseRepository.findByUserId(userId);
+    }
+
+    public List<SavingsGoal> getSavingsGoals(Long userId) {
+        return savingsGoalRepository.findAll();
+    }
+
+    public List<Investment> getInvestments(Long userId) {
+        return investmentRepository.findAll();
     }
 
     @Override
