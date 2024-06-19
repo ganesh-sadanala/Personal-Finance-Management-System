@@ -33,7 +33,7 @@ public class MutationResolver implements GraphQLMutationResolver {
         investment.setAmount(amount);
         investment.setPurchaseDate(LocalDate.parse(purchaseDate));
         investment.setCurrentValue(currentValue);
-        investment.setUser(new User()); // Assuming User has a constructor or setter
+        investment.setUser(new User());
         return investmentRepository.save(investment);
     }
 
@@ -64,7 +64,7 @@ public class MutationResolver implements GraphQLMutationResolver {
         goal.setTargetAmount(targetAmount);
         goal.setCurrentAmount(currentAmount);
         goal.setTargetDate(LocalDate.parse(targetDate));
-        goal.setUser(new User()); // Assuming User has a constructor or setter
+        goal.setUser(new User());
         return savingsGoalRepository.save(goal);
     }
 
