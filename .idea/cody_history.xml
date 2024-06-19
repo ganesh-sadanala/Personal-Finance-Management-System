@@ -145,6 +145,26 @@
                 </messages>
                 <updatedAt value="2024-06-15T16:12:58.249075" />
               </chat>
+              <chat>
+                <internalId value="418b3633-c456-4713-b2f8-a9ab2a2307c6" />
+                <llm>
+                  <llm>
+                    <model value="anthropic/claude-3-sonnet-20240229" />
+                    <provider value="Anthropic" />
+                    <title value="Claude 3 Sonnet" />
+                  </llm>
+                </llm>
+              </chat>
+              <chat>
+                <internalId value="2f6217e7-105a-4ecc-8559-a214c0ce878d" />
+                <llm>
+                  <llm>
+                    <model value="anthropic/claude-3-sonnet-20240229" />
+                    <provider value="Anthropic" />
+                    <title value="Claude 3 Sonnet" />
+                  </llm>
+                </llm>
+              </chat>
             </list>
           </chats>
           <defaultLlm>
