@@ -1,31 +1,35 @@
 package com.systems.finance.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "investment")
 public class Investment {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String type; // e.g., Stock, Bond, Mutual Fund
+
+    @Column(name = "type")
+    private String type;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "amount")
     private Float amount;
+
+    @Column(name = "purchase_date")
     private LocalDate purchaseDate;
+
+    @Column(name = "current_value")
     private Float currentValue;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
-
 
     public Long getId() {
         return id;

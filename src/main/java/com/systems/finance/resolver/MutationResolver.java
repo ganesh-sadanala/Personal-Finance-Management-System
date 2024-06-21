@@ -1,15 +1,15 @@
 package com.systems.finance.resolver;
 import com.systems.finance.model.*;
 import com.systems.finance.repository.*;
-import graphql.kickstart.annotations.GraphQLMutationResolver;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.MutationMapping;
+import org.springframework.stereotype.Controller;
 
-import java.lang.annotation.Annotation;
 import java.time.LocalDate;
 
-@Component
-public class MutationResolver implements GraphQLMutationResolver {
+@Controller
+public class MutationResolver {
 
     @Autowired
     private UserRepository userRepository;
@@ -26,18 +26,22 @@ public class MutationResolver implements GraphQLMutationResolver {
     @Autowired
     private InvestmentRepository investmentRepository;
 
-    public Investment createInvestment(Long userId, String type, String name, Float amount, String purchaseDate, Float currentValue) {
+    @MutationMapping
+    public Investment createInvestment(@Argument Long userId, @Argument String type, @Argument String name,
+                                       @Argument Float amount, @Argument String purchaseDate, @Argument Float currentValue) {
         Investment investment = new Investment();
         investment.setType(type);
         investment.setName(name);
         investment.setAmount(amount);
         investment.setPurchaseDate(LocalDate.parse(purchaseDate));
         investment.setCurrentValue(currentValue);
-        investment.setUser(new User());
+        investment.setUser(userRepository.findById(userId).orElse(null));
         return investmentRepository.save(investment);
     }
 
-    public Investment updateInvestment(Long id, String type, String name, Float amount, String purchaseDate, Float currentValue) {
+    @MutationMapping
+    public Investment updateInvestment(@Argument Long id, @Argument String type, @Argument String name,
+                                       @Argument Float amount, @Argument String purchaseDate, @Argument Float currentValue) {
         Investment investment = investmentRepository.findById(id).orElse(null);
         if (investment != null) {
             investment.setType(type);
@@ -50,7 +54,8 @@ public class MutationResolver implements GraphQLMutationResolver {
         return investment;
     }
 
-    public boolean deleteInvestment(Long id) {
+    @MutationMapping
+    public boolean deleteInvestment(@Argument Long id) {
         if (investmentRepository.existsById(id)) {
             investmentRepository.deleteById(id);
             return true;
@@ -58,17 +63,21 @@ public class MutationResolver implements GraphQLMutationResolver {
         return false;
     }
 
-    public SavingsGoal createSavingsGoal(Long userId, String description, Float targetAmount, Float currentAmount, String targetDate) {
+    @MutationMapping
+    public SavingsGoal createSavingsGoal(@Argument Long userId, @Argument String description, @Argument Float targetAmount,
+                                         @Argument Float currentAmount, @Argument String targetDate) {
         SavingsGoal goal = new SavingsGoal();
         goal.setDescription(description);
         goal.setTargetAmount(targetAmount);
         goal.setCurrentAmount(currentAmount);
         goal.setTargetDate(LocalDate.parse(targetDate));
-        goal.setUser(new User());
+        goal.setUser(userRepository.findById(userId).orElse(null));
         return savingsGoalRepository.save(goal);
     }
 
-    public SavingsGoal updateSavingsGoal(Long id, String description, Float targetAmount, Float currentAmount, String targetDate) {
+    @MutationMapping
+    public SavingsGoal updateSavingsGoal(@Argument Long id, @Argument String description, @Argument Float targetAmount,
+                                         @Argument Float currentAmount, @Argument String targetDate) {
         SavingsGoal goal = savingsGoalRepository.findById(id).orElse(null);
         if (goal != null) {
             goal.setDescription(description);
@@ -80,7 +89,8 @@ public class MutationResolver implements GraphQLMutationResolver {
         return goal;
     }
 
-    public boolean deleteSavingsGoal(Long id) {
+    @MutationMapping
+    public boolean deleteSavingsGoal(@Argument Long id) {
         if (savingsGoalRepository.existsById(id)) {
             savingsGoalRepository.deleteById(id);
             return true;
@@ -88,7 +98,8 @@ public class MutationResolver implements GraphQLMutationResolver {
         return false;
     }
 
-    public User createUser(String username, String password, String role) {
+    @MutationMapping
+    public User createUser(@Argument String username, @Argument String password, @Argument String role) {
         User user = new User();
         user.setUsername(username);
         user.setPassword(password);
@@ -96,8 +107,8 @@ public class MutationResolver implements GraphQLMutationResolver {
         return userRepository.save(user);
     }
 
-
-    public Income createIncome(Long userId, String source, Double amount, String date) {
+    @MutationMapping
+    public Income createIncome(@Argument Long userId, @Argument String source, @Argument Double amount, @Argument String date) {
         Income income = new Income();
         income.setSource(source);
         income.setAmount(amount);
@@ -106,7 +117,8 @@ public class MutationResolver implements GraphQLMutationResolver {
         return incomeRepository.save(income);
     }
 
-    public Expense createExpense(Long userId, String category, Double amount, String date) {
+    @MutationMapping
+    public Expense createExpense(@Argument Long userId, @Argument String category, @Argument Double amount, @Argument String date) {
         Expense expense = new Expense();
         expense.setCategory(category);
         expense.setAmount(amount);
@@ -114,10 +126,4 @@ public class MutationResolver implements GraphQLMutationResolver {
         expense.setUser(userRepository.findById(userId).orElse(null));
         return expenseRepository.save(expense);
     }
-
-    @Override
-    public Class<? extends Annotation> annotationType() {
-        return null;
-    }
 }
-

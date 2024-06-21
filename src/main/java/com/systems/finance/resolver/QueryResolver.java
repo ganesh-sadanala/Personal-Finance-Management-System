@@ -2,16 +2,15 @@ package com.systems.finance.resolver;
 
 import com.systems.finance.model.*;
 import com.systems.finance.repository.*;
-import graphql.kickstart.annotations.GraphQLQueryResolver;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.QueryMapping;
+import org.springframework.stereotype.Controller;
 
-import java.lang.annotation.Annotation;
 import java.util.List;
 
-
-@Component
-public class QueryResolver implements GraphQLQueryResolver {
+@Controller
+public class QueryResolver {
 
     @Autowired
     private InvestmentRepository investmentRepository;
@@ -28,29 +27,28 @@ public class QueryResolver implements GraphQLQueryResolver {
     @Autowired
     private ExpenseRepository expenseRepository;
 
-    public User getUser(Long id) {
+    @QueryMapping
+    public User getUser(@Argument Long id) {
         return userRepository.findById(id).orElse(null);
     }
 
-    public List<Income> getIncomes(Long userId) {
+    @QueryMapping
+    public List<Income> getIncomes(@Argument Long userId) {
         return incomeRepository.findByUserId(userId);
     }
 
-    public List<Expense> getExpenses(Long userId) {
+    @QueryMapping
+    public List<Expense> getExpenses(@Argument Long userId) {
         return expenseRepository.findByUserId(userId);
     }
 
-    public List<SavingsGoal> getSavingsGoals(Long userId) {
+    @QueryMapping
+    public List<SavingsGoal> getSavingsGoals(@Argument Long userId) {
         return savingsGoalRepository.findAll();
     }
 
-    public List<Investment> getInvestments(Long userId) {
+    @QueryMapping
+    public List<Investment> getInvestments(@Argument Long userId) {
         return investmentRepository.findAll();
     }
-
-    @Override
-    public Class<? extends Annotation> annotationType() {
-        return null;
-    }
 }
-

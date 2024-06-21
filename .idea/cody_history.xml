@@ -185,6 +185,60 @@
                   </llm>
                 </llm>
               </chat>
+              <chat>
+                <internalId value="c4b227d2-e2dd-4980-8751-69efcd1b6231" />
+                <llm>
+                  <llm>
+                    <model value="anthropic/claude-3-sonnet-20240229" />
+                    <provider value="Anthropic" />
+                    <title value="Claude 3 Sonnet" />
+                  </llm>
+                </llm>
+              </chat>
+              <chat>
+                <internalId value="9685c030-fcb9-4e44-a236-283ab0f15707" />
+                <llm>
+                  <llm>
+                    <model value="anthropic/claude-3-sonnet-20240229" />
+                    <provider value="Anthropic" />
+                    <title value="Claude 3 Sonnet" />
+                  </llm>
+                </llm>
+                <messages>
+                  <list>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="Please review and analyze @src/main/resources/graphql/schema.graphqls:1-59  and identify potential areas for improvement related to code smells, readability, maintainability, performance, security, etc. Do not list issues already addressed in the given code. Focus on providing up to 5 constructive suggestions that could make the code more robust, efficient, or align with best practices. For each suggestion, provide a brief explanation of the potential benefits. After listing any recommendations, summarize if you found notable opportunities to enhance the code quality overall or if the code generally follows sound design principles. If no issues found, reply 'There are no errors.'" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                    </message>
+                  </list>
+                </messages>
+                <updatedAt value="2024-06-20T22:00:41.451232" />
+              </chat>
+              <chat>
+                <internalId value="a32abc16-e8b7-4c24-8fbd-2c912ea91da4" />
+                <llm>
+                  <llm>
+                    <model value="anthropic/claude-3-sonnet-20240229" />
+                    <provider value="Anthropic" />
+                    <title value="Claude 3 Sonnet" />
+                  </llm>
+                </llm>
+                <messages>
+                  <list>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="Explain what @src/main/resources/graphql/schema.graphqls:1-59  does in simple terms. Assume the audience is a beginner programmer who has just learned the language features and basic syntax. Focus on explaining: 1) The purpose of the code 2) What input(s) it takes 3) What output(s) it produces 4) How it achieves its purpose through the logic and algorithm. 5) Any important logic flows or data transformations happening. Use simple language a beginner could understand. Include enough detail to give a full picture of what the code aims to accomplish without getting too technical. Format the explanation in coherent paragraphs, using proper punctuation and grammar. Write the explanation assuming no prior context about the code is known. Do not make assumptions about variables or functions not shown in the shared code. Start the answer with the name of the code that is being explained." />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                    </message>
+                  </list>
+                </messages>
+                <updatedAt value="2024-06-20T22:01:11.796824" />
+              </chat>
             </list>
           </chats>
           <defaultLlm>

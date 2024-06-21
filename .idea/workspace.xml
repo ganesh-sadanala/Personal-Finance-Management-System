@@ -4,15 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bfdb2db-dba7-4351-8f3d-7e530dd72277" name="Changes" comment="Migrate to resolver - pure Graphql based approach">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/FinanceManagementSystem.java" afterDir="false" />
+    <list default="true" id="3bfdb2db-dba7-4351-8f3d-7e530dd72277" name="Changes" comment="Update MutationResolver">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/GraphiQLConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/cody_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cody_history.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtRequestFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtTokenProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicaton.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicaton.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/Expense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/Income.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/Income.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/Investment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/Investment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/SavingsGoal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/SavingsGoal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/resolver/MutationResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/resolver/MutationResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/resolver/QueryResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/resolver/QueryResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtAuthenticationEntryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicaton.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,21 +51,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.FinanceManagementSystem.executor": "Run",
-    "Application.FinanceManagemetSystem.executor": "Run",
-    "Application.SpringApplication.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.CodyAccountHistoryMigration": "true",
-    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
-    "RunOnceActivity.CodyHistoryLlmMigration": "true",
-    "RunOnceActivity.CodyProjectSettingsMigration": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.FinanceManagementSystem.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FinanceManagemetSystem.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SpringApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -169,7 +179,63 @@
       <option name="project" value="LOCAL" />
       <updated>1718816248180</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Refactor code">
+      <option name="closed" value="true" />
+      <created>1718820039001</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1718820039001</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add JwtUtils for generating, validation and extracting claims in JWT token">
+      <option name="closed" value="true" />
+      <created>1718820563496</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1718820563496</updated>
+    </task>
+    <task id="LOCAL-00016" summary="configure security and authentication filter chain">
+      <option name="closed" value="true" />
+      <created>1718820723459</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1718820723459</updated>
+    </task>
+    <task id="LOCAL-00017" summary="validate jwt token and handle unauthorized request">
+      <option name="closed" value="true" />
+      <created>1718820835859</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1718820835859</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Update security config">
+      <option name="closed" value="true" />
+      <created>1718822978822</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1718822978822</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Add Investment and SavingsGoal schemas and resolvers">
+      <option name="closed" value="true" />
+      <created>1718825887942</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1718825887942</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Update MutationResolver">
+      <option name="closed" value="true" />
+      <created>1718825943626</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1718825943626</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -186,17 +252,13 @@
     <MESSAGE value="configure spring security" />
     <MESSAGE value="Bug fixes" />
     <MESSAGE value="Migrate to resolver - pure Graphql based approach" />
-    <option name="LAST_COMMIT_MESSAGE" value="Migrate to resolver - pure Graphql based approach" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/systems/finance/FinanceManagementSystem.java</url>
-          <line>9</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Refactor code" />
+    <MESSAGE value="Add JwtUtils for generating, validation and extracting claims in JWT token" />
+    <MESSAGE value="configure security and authentication filter chain" />
+    <MESSAGE value="validate jwt token and handle unauthorized request" />
+    <MESSAGE value="Update security config" />
+    <MESSAGE value="Add Investment and SavingsGoal schemas and resolvers" />
+    <MESSAGE value="Update MutationResolver" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update MutationResolver" />
   </component>
 </project>
