@@ -4,25 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bfdb2db-dba7-4351-8f3d-7e530dd72277" name="Changes" comment="Update MutationResolver">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/GraphiQLConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cody_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cody_history.xml" afterDir="false" />
+    <list default="true" id="3bfdb2db-dba7-4351-8f3d-7e530dd72277" name="Changes" comment="Configure schema and convert to annotation based graphql">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/Expense.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/Income.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/Income.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/Investment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/Investment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/SavingsGoal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/SavingsGoal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/resolver/MutationResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/resolver/MutationResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/repository/ExpenseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/repository/ExpenseRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/resolver/QueryResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/resolver/QueryResolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtAuthenticationEntryPoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtRequestFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicaton.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/graphql/schema.graphqls" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphql/schema.graphqls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718825943626</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Configure schema and convert to annotation based graphql">
+      <option name="closed" value="true" />
+      <created>1718942588729</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1718942588729</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -259,6 +258,7 @@
     <MESSAGE value="Update security config" />
     <MESSAGE value="Add Investment and SavingsGoal schemas and resolvers" />
     <MESSAGE value="Update MutationResolver" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update MutationResolver" />
+    <MESSAGE value="Configure schema and convert to annotation based graphql" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configure schema and convert to annotation based graphql" />
   </component>
 </project>
