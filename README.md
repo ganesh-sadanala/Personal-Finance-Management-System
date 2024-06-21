@@ -20,9 +20,9 @@ Develop a personal finance management system that allows users to track their in
   - Provide visual insights such as spending trends, budget vs. actuals, investment growth, etc.
 
 - **Advanced features:** 
-  - **Pagination & Filtering**
-  - **Batching & DataLoader**
-  - **GraphQL Error Handling**
+  - **Pagination & Filtering:** Improves the performance of API and also provides more options for users.
+  - **DataLoader:** To handle `N+1` query problem by providing batching and caching capabilities. 
+  - **GraphQL Error Handling:** 
   - **Subscriptions**
   - **API Performance Monitoring**
   - **Documentation**

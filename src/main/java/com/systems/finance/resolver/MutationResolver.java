@@ -1,12 +1,14 @@
 package com.systems.finance.resolver;
 import com.systems.finance.model.*;
 import com.systems.finance.repository.*;
+import org.dataloader.DataLoader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.stereotype.Controller;
 
 import java.time.LocalDate;
+import java.util.concurrent.CompletableFuture;
 
 @Controller
 public class MutationResolver {
@@ -27,16 +29,19 @@ public class MutationResolver {
     private InvestmentRepository investmentRepository;
 
     @MutationMapping
-    public Investment createInvestment(@Argument Long userId, @Argument String type, @Argument String name,
-                                       @Argument Float amount, @Argument String purchaseDate, @Argument Float currentValue) {
-        Investment investment = new Investment();
-        investment.setType(type);
-        investment.setName(name);
-        investment.setAmount(amount);
-        investment.setPurchaseDate(LocalDate.parse(purchaseDate));
-        investment.setCurrentValue(currentValue);
-        investment.setUser(userRepository.findById(userId).orElse(null));
-        return investmentRepository.save(investment);
+    public CompletableFuture<Investment> createInvestment(@Argument Long userId, @Argument String type, @Argument String name,
+                                                      @Argument Float amount, @Argument String purchaseDate, @Argument Float currentValue,
+                                                      DataLoader<Long, User> userLoader) {
+        return userLoader.load(userId).thenApply(user -> {
+            Investment investment = new Investment();
+            investment.setType(type);
+            investment.setName(name);
+            investment.setAmount(amount);
+            investment.setPurchaseDate(LocalDate.parse(purchaseDate));
+            investment.setCurrentValue(currentValue);
+            investment.setUser(user);
+            return investmentRepository.save(investment);
+        });
     }
 
     @MutationMapping
@@ -64,15 +69,18 @@ public class MutationResolver {
     }
 
     @MutationMapping
-    public SavingsGoal createSavingsGoal(@Argument Long userId, @Argument String description, @Argument Float targetAmount,
-                                         @Argument Float currentAmount, @Argument String targetDate) {
-        SavingsGoal goal = new SavingsGoal();
-        goal.setDescription(description);
-        goal.setTargetAmount(targetAmount);
-        goal.setCurrentAmount(currentAmount);
-        goal.setTargetDate(LocalDate.parse(targetDate));
-        goal.setUser(userRepository.findById(userId).orElse(null));
-        return savingsGoalRepository.save(goal);
+    public CompletableFuture<SavingsGoal> createSavingsGoal(@Argument Long userId, @Argument String description, @Argument Float targetAmount,
+                                                       @Argument Float currentAmount, @Argument String targetDate,
+                                                       DataLoader<Long, User> userLoader) {
+        return userLoader.load(userId).thenApply(user -> {
+            SavingsGoal goal = new SavingsGoal();
+            goal.setDescription(description);
+            goal.setTargetAmount(targetAmount);
+            goal.setCurrentAmount(currentAmount);
+            goal.setTargetDate(LocalDate.parse(targetDate));
+            goal.setUser(userRepository.findById(userId).orElse(null));
+            return savingsGoalRepository.save(goal);
+        });
     }
 
     @MutationMapping
@@ -108,22 +116,28 @@ public class MutationResolver {
     }
 
     @MutationMapping
-    public Income createIncome(@Argument Long userId, @Argument String source, @Argument Double amount, @Argument String date) {
-        Income income = new Income();
-        income.setSource(source);
-        income.setAmount(amount);
-        income.setDate(LocalDate.parse(date));
-        income.setUser(userRepository.findById(userId).orElse(null));
-        return incomeRepository.save(income);
+    public CompletableFuture<Income> createIncome(@Argument Long userId, @Argument String source, @Argument Double amount, @Argument String date,
+                                                  DataLoader<Long, User> userLoader) {
+        return userLoader.load(userId).thenApply(user -> {
+            Income income = new Income();
+            income.setSource(source);
+            income.setAmount(amount);
+            income.setDate(LocalDate.parse(date));
+            income.setUser(user);
+            return incomeRepository.save(income);
+        });
     }
 
     @MutationMapping
-    public Expense createExpense(@Argument Long userId, @Argument String category, @Argument Double amount, @Argument String date) {
-        Expense expense = new Expense();
-        expense.setCategory(category);
-        expense.setAmount(amount);
-        expense.setDate(LocalDate.parse(date));
-        expense.setUser(userRepository.findById(userId).orElse(null));
-        return expenseRepository.save(expense);
+    public CompletableFuture<Expense> createExpense(@Argument Long userId, @Argument String category, @Argument Double amount, @Argument String date,
+                                                    DataLoader<Long, User> userLoader) {
+        return userLoader.load(userId).thenApply(user -> {
+            Expense expense = new Expense();
+            expense.setCategory(category);
+            expense.setAmount(amount);
+            expense.setDate(LocalDate.parse(date));
+            expense.setUser(user);
+            return expenseRepository.save(expense);
+        });
     }
 }
