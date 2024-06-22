@@ -28,3 +28,12 @@ Develop a personal finance management system that allows users to track their in
   - **Documentation**
   - **User Authentication and Authorization:** Secure user registration and login using JWT tokens.
   - **Testing:** JUnit and Mockito for unit testing, and integration tests.
+
+
+**Project Set Up & Run**
+- Install Java 17, PostgreSQL server(create necessary Databases) and Maven
+- Clone Repo
+- [OPTIONAL] Comment `JWT security code part` for learning purpose 
+- Execute `mvn clean install`
+- Open GraphiQL interface on browser: `http://localhost:8080/graphiql?path=/graphql`
+- Interact and learn from GraphQL APIs
