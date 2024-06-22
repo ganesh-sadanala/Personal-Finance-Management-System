@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bfdb2db-dba7-4351-8f3d-7e530dd72277" name="Changes" comment="Update README.md">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/service/UserDataLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/exception/GraphQLExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/exception/InvalidInputException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/exception/UserNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cody_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cody_history.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/GraphiQLConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/config/GraphiQLConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/resolver/MutationResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/resolver/MutationResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/resolver/QueryResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/resolver/QueryResolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtAuthenticationEntryPoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtRequestFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systems/finance/security/JwtUtils.java" afterDir="false" />
@@ -251,7 +253,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718947995135</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Implement UserDataLoader for User field in other types to fetch in batch fashion.">
+      <option name="closed" value="true" />
+      <created>1718991334409</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1718991334409</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Update README.md">
+      <option name="closed" value="true" />
+      <created>1719026941104</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1719026941104</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -277,6 +295,7 @@
     <MESSAGE value="Update MutationResolver" />
     <MESSAGE value="Configure schema and convert to annotation based graphql" />
     <MESSAGE value="Implement pagination for expenses" />
+    <MESSAGE value="Implement UserDataLoader for User field in other types to fetch in batch fashion." />
     <MESSAGE value="Update README.md" />
     <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
   </component>

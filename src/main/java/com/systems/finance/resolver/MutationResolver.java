@@ -1,4 +1,5 @@
 package com.systems.finance.resolver;
+import com.systems.finance.exception.UserNotFoundException;
 import com.systems.finance.model.*;
 import com.systems.finance.repository.*;
 import org.dataloader.DataLoader;
@@ -33,6 +34,7 @@ public class MutationResolver {
                                                       @Argument Float amount, @Argument String purchaseDate, @Argument Float currentValue,
                                                       DataLoader<Long, User> userLoader) {
         return userLoader.load(userId).thenApply(user -> {
+            if(user == null) throw new UserNotFoundException(userId);
             Investment investment = new Investment();
             investment.setType(type);
             investment.setName(name);
@@ -73,6 +75,7 @@ public class MutationResolver {
                                                        @Argument Float currentAmount, @Argument String targetDate,
                                                        DataLoader<Long, User> userLoader) {
         return userLoader.load(userId).thenApply(user -> {
+            if(user == null) throw new UserNotFoundException(userId);
             SavingsGoal goal = new SavingsGoal();
             goal.setDescription(description);
             goal.setTargetAmount(targetAmount);
@@ -119,6 +122,7 @@ public class MutationResolver {
     public CompletableFuture<Income> createIncome(@Argument Long userId, @Argument String source, @Argument Double amount, @Argument String date,
                                                   DataLoader<Long, User> userLoader) {
         return userLoader.load(userId).thenApply(user -> {
+            if(user == null) throw new UserNotFoundException(userId);
             Income income = new Income();
             income.setSource(source);
             income.setAmount(amount);
@@ -132,6 +136,7 @@ public class MutationResolver {
     public CompletableFuture<Expense> createExpense(@Argument Long userId, @Argument String category, @Argument Double amount, @Argument String date,
                                                     DataLoader<Long, User> userLoader) {
         return userLoader.load(userId).thenApply(user -> {
+            if(user == null) throw new UserNotFoundException(userId);
             Expense expense = new Expense();
             expense.setCategory(category);
             expense.setAmount(amount);
