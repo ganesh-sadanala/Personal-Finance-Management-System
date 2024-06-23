@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+// generates and validates tokens
 @Component
 public class JwtUtils {
 

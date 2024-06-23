@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+// loads user from database
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 

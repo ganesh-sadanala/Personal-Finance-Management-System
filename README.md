@@ -22,11 +22,11 @@ Develop a personal finance management system that allows users to track their in
 - **Advanced features:** 
   - **Pagination & Filtering:** Improves the performance of API and also provides more options for users.
   - **DataLoader:** To handle `N+1` query problem by providing batching and caching capabilities. 
-  - **GraphQL Error Handling:** 
+  - **GraphQL Error Handling:** Handle and throw necessary exceptions.
   - **Subscriptions**
-  - **API Performance Monitoring**
-  - **Documentation**
-  - **User Authentication and Authorization:** Secure user registration and login using JWT tokens.
+  - **API Performance Monitoring:**
+  - **Documentation:**
+  - **User Authentication and Authorization:** secure the GraphQL endpoints
   - **Testing:** JUnit and Mockito for unit testing, and integration tests.
 
 

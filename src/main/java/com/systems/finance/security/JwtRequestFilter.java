@@ -14,6 +14,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+// Requests are intercepted through this filter to validate JWT token
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {
 
